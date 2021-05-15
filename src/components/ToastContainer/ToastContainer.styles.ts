@@ -20,8 +20,8 @@ const toastTypeVariations = {
 const Container = styled.div`
   position: absolute;
   right: 0;
-  top: 0;
-  padding: 3rem;
+  top: 6rem;
+  padding: 3rem 3rem 3rem 0;
   overflow: hidden;
 `;
 
