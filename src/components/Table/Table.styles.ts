@@ -46,8 +46,7 @@ const RemoveIcon = styled(FiTrash2)`
 `;
 
 const TableImage = styled.img`
-  width: 100%;
-  max-width: 10rem;
+  height: 10rem;
 `;
 
 export {
