@@ -6,6 +6,8 @@ interface IUseInfiniteScrollProps {
   handleLoadMore: () => void;
 }
 
+const defaultScrollHeight = 20;
+
 export function useInfiniteScroll({
   handleLoadMore,
   hasNextPage,
@@ -20,7 +22,10 @@ export function useInfiniteScroll({
     const scrollHeight =
       (document.documentElement && document.documentElement.scrollHeight) ||
       document.body.scrollHeight;
-    if (scrollTop + window.innerHeight >= scrollHeight && !isFetching) {
+    if (
+      scrollTop + window.innerHeight + defaultScrollHeight >= scrollHeight &&
+      !isFetching
+    ) {
       setIsBottom(true);
     }
   }, [isFetching]);
