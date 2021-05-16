@@ -35,7 +35,7 @@ const Header = (): JSX.Element => {
     if (user) {
       const fullName = user.name.split(' ');
       const firstInitial = fullName.shift().charAt(0);
-      const lastInitial = fullName.length > 1 ? fullName.pop().charAt(0) : '';
+      const lastInitial = fullName.pop()?.charAt(0) || '';
       const userInitials = `${firstInitial}${lastInitial}`;
       setInitials(userInitials);
 
